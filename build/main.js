@@ -22,6 +22,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bosesoundtouchadapter = void 0;
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = __importStar(require("@iobroker/adapter-core"));
@@ -133,6 +134,7 @@ class Bosesoundtouchadapter extends utils.Adapter {
         }
     }
 }
+exports.Bosesoundtouchadapter = Bosesoundtouchadapter;
 if (module.parent) {
     // Export the constructor in compact mode
     module.exports = (options) => new Bosesoundtouchadapter(options);
