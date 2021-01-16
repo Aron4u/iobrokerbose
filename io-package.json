@@ -1,0 +1,101 @@
+{
+	"common": {
+		"name": "bosesoundtouchadapter",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Bose soundtouch",
+		"titleLang": {
+			"en": "Bose soundtouch",
+			"de": "Bose Soundtouch",
+			"ru": "Bose Soundtouch",
+			"pt": "Bose soundtouch",
+			"nl": "Bose soundtouch",
+			"fr": "Bose SoundTouch",
+			"it": "Bose soundtouch",
+			"es": "Bose soundtouch",
+			"pl": "Bose SoundTouch",
+			"zh-cn": "Bose SoundTouch"
+		},
+		"desc": {
+			"en": "An adapter for your bose soundtouch",
+			"de": "Ein Adapter für Ihren Bose Soundtouch",
+			"ru": "Адаптер для вашего bose soundtouch",
+			"pt": "Um adaptador para o seu toque sonoro Bose",
+			"nl": "Een adapter voor je bose soundtouch",
+			"fr": "Un adaptateur pour votre SoundTouch Bose",
+			"it": "Un adattatore per il tuo bose soundtouch",
+			"es": "Un adaptador para su bose soundtouch",
+			"pl": "Adapter do głośnika bose soundtouch",
+			"zh-cn": "Bose SoundTouch的适配器"
+		},
+		"authors": [
+			"Aron <asd@asd.de>"
+		],
+		"keywords": [
+			"bose",
+			"soundtouch",
+			"io-broker",
+			"adapter"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "bosesoundtouchadapter.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/Aron/ioBroker.bosesoundtouchadapter/master/admin/bosesoundtouchadapter.png",
+		"readme": "https://github.com/Aron/ioBroker.bosesoundtouchadapter/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "multimedia",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "push",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "iobroker.bosesoundtouchadapter",
+  "version": "0.0.1",
+  "description": "An adapter for your bose soundtouch",
+  "author": {
+    "name": "Aron",
+    "email": "asd@asd.de"
+  },
+  "homepage": "https://github.com/Aron/ioBroker.bosesoundtouchadapter",
+  "license": "MIT",
+  "keywords": [
+    "bose",
+    "soundtouch",
+    "io-broker",
+    "adapter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Aron/ioBroker.bosesoundtouchadapter.git"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^2.4.0",
+    "js2xml": "^1.0.9",
+    "string-format": "^2.0.0",
+    "ws": "^7.4.2",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@iobroker/testing": "^2.4.2",
+    "@types/chai": "^4.2.14",
+    "@types/chai-as-promised": "^7.1.3",
+    "@types/gulp": "^4.0.8",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.21",
+    "@types/proxyquire": "^1.3.28",
+    "@types/sinon": "^9.0.10",
+    "@types/sinon-chai": "^3.2.5",
+    "@types/ws": "^7.4.0",
+    "@types/xml2js": "^0.4.7",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "axios": "^0.21.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^7.18.0",
+    "gulp": "^4.0.2",
+    "mocha": "^8.2.1",
+    "proxyquire": "^2.1.3",
+    "rimraf": "^3.0.2",
+    "sinon": "^9.2.3",
+    "sinon-chai": "^3.5.0",
+    "source-map-support": "^0.5.19",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "main": "build/main.js",
+  "scripts": {
+    "prebuild": "rimraf ./build",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "build": "npm run build:ts",
+    "watch:ts": "tsc -p tsconfig.build.json --watch",
+    "watch": "npm run watch:ts",
+    "test:ts": "mocha --config test/mocharc.custom.json src/**/*.test.ts",
+    "test:package": "mocha test/package --exit",
+    "test:unit": "mocha test/unit --exit",
+    "test:integration": "mocha test/integration --exit",
+    "test": "npm run test:ts && npm run test:package",
+    "check": "tsc --noEmit",
+    "lint": "eslint --ext .ts src/"
+  },
+  "bugs": {
+    "url": "https://github.com/Aron/ioBroker.bosesoundtouchadapter/issues"
+  },
+  "readmeFilename": "README.md"
+}
